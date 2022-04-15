@@ -28,7 +28,6 @@ const getRandomBooks = async function(req,res){
     res.send({msg: randomBook })
 
 }
-
 const getParticularBooks = async function(req, res){
     let name = req.query.authorName
     let year = req.query.year

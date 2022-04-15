@@ -14,9 +14,3 @@ const getUsersData= async function (req, res) {
 
 module.exports.createUser= createUser
 module.exports.getUsersData= getUsersData
-// module.exports.getXINRBooks =  getXINRBooks
-// module.exports.getRandomBooks = getRandomBooks
-// module.exports.getParticularBooks = getParticularBooks
-// module.exports.getBooksInYear = getBooksInYear
-// module.exports.createBook = createBook
-// module.exports.bookList = bookList
