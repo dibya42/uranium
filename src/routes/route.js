@@ -1,7 +1,10 @@
 const express = require('express');
 const router = express.Router();
 // const UserModel= require("../models/userModel.js")
-const UserController= require("../controllers/userController")
+// const UserController= require("../controllers/userController")
+const userProductController = require("../controllers/userProductConrtoller")
+const productController = require("../controllers/productController")
+const orderController = require("../controllers/orderController")
 //const BookController= require("../controllers/bookController")
 
 
@@ -41,8 +44,8 @@ router.get("/test-me", function (req, res) {
 
 
 
-router.get("/basicRoute", UserController.basicCode)
-router.post('/create-a-user', UserController.createAUser)
+// router.get("/basicRoute", UserController.basicCode)
+// router.post('/create-a-user', UserController.createAUser)
 
 
 
@@ -50,7 +53,13 @@ router.post('/create-a-user', UserController.createAUser)
 // router.get("/basicRoute3", commonMW.mid2, UserController.basicCode3)
 // router.get("/basicRoute4", commonMW.mid1, commonMW.mid4, UserController.basicCode4)
 
+router.post("/createUser", userProductController.createUserProduct)
 
+router.post("/createProduct", productController.createProduct)
+
+router.post("/order", orderController.orderPurchased)
+
+router.post("/createOrder", orderController.createOrder)
 
 
 module.exports = router;
