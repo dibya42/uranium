@@ -77,7 +77,7 @@ let getOtp = async function (req, res) {
         res.status(500).send({ msg: err.message })
     }
 }
-
+// 1.
 
 let getDistrictById = async function (req, res) {
     try{
